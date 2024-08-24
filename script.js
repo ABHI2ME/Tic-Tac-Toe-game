@@ -3,6 +3,8 @@ const items = document.querySelectorAll('.box-items') ;
 const player1 = document.querySelector('.player-1') ;
 const player2 = document.querySelector('.player-2') ;
 const container = document.querySelector('.container') ;
+const audioStart = document.querySelector('#start-sound');
+const audioEnd = document.querySelector('#end-sound');
 
 
 let counter = 0 ;
@@ -87,6 +89,12 @@ if(power === true){
         
         // container.appendChild(winner) ;
         power = false ;
+        if(txt != "tie"){
+             audioStart.play();
+
+        }else{
+              audioEnd.play() ;
+        }
         return ;
     
     }
